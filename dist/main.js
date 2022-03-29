@@ -7,12 +7,11 @@
     `.${dropdownContainerClassName}`
   );
   dropdownsContainerList.forEach((dropdownContainer) => {
-    dropdownContainer.addEventListener("click", () => {
+    const button = dropdownContainer.querySelector(`.${dropdownIconClassName}`);
+    button.addEventListener("click", () => {
       dropdownContainer.classList.toggle(`${openMenuClass}`);
     });
   });
-
-  // Apply styles
 
   const style = document.createElement("style");
   document.head.appendChild(style);
