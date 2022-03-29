@@ -2,7 +2,12 @@
   const dropdownContainerClassName = "dropdown-container";
   const dropdownItemClassName = "dropdown-item";
   const dropdownIconClassName = "dropdown-icon";
-  const dropdownsContainers = document.querySelectorAll(
+  const dropdownsContainerList = document.querySelectorAll(
     `.${dropdownContainerClassName}`
   );
+  dropdownsContainerList.forEach((dropdownContainer) => {
+    dropdownContainer.addEventListener("click", () => {
+      dropdownContainer.classList.toggle("open-menu");
+    });
+  });
 })();
